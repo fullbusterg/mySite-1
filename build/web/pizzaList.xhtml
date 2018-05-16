@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    
+        <h:head>
+          
+                <title>Prime Faces</title>
+           
+        </h:head>
+<h:outputStylesheet library="css" name="listCSS.css"/>
+
+        <h:body>
+            <h:form>
+                <center> <h1  style="margin-top: 3 " > PIZZA ORDER LIST  </h1> </center>
+  <center> <h:graphicImage library="images" name="wishlist.gif" height="150" width="770" ></h:graphicImage></center>
+  
+                    <h:panelGrid  columns="2"    class="auto">
+                        
+                       
+                        
+                        
+                        <p:dataTable  var="pizza" value="#{pizzaController.allPizzas}"  >
+
+                <p:column  headerText="ID"> <h:outputText value="#{pizza.id}" /> </p:column>
+                <p:column  headerText="Name"> <h:outputText value="#{pizza.name}"/>   </p:column>
+                <p:column  headerText="Type"> <h:outputText value="#{pizza.type}"/>   </p:column>
+                <p:column  headerText="Price"> <h:outputText value="#{pizza.price}"/> </p:column>
+
+                    </p:dataTable> 
+                        
+                        
+                       
+             </h:panelGrid>
+  
+                          
+                         <center> 
+                         
+                             
+                          <p:commandButton value="Pizza management" action="index"  />  <br/><br/>
+                            <p:commandButton value="Client Claim" action="clientClaim"  /><br/><br/>
+                             <p:commandButton value=" menu" action="HomePage"  /> <br/><br/> </center>
+                 
+  
+            
+            </h:form>
+          
+        </h:body>
+    
+</html>
+

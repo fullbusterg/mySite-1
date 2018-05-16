@@ -1,0 +1,30 @@
+body{
+  
+ background-image: url("images/darpa.jpg"); 
+color: white;
+ 
+}
+p {
+    color: #FFFFFF;
+    text-shadow: 4px 4px 4px #1D702D;
+    appearance: pop-up-menu 
+        
+
+}
+
+
+h1 {
+    color: #FFFFFF;
+    text-shadow: 4px 4px 4px #1D702D;
+    appearance: pop-up-menu
+}
+.btn-6d {
+	border: 2px dashed #226fbe;
+}
+
+.btn-6d:hover {
+	background: transparent;
+	color: #226fbe;
+}
+
+

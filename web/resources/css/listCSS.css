@@ -1,0 +1,28 @@
+body{
+  
+ background-image: url("images/background.jpg"); 
+color: darkolivegreen;
+ animation: linear
+}
+
+
+h1 {
+    color: cadetblue;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+div {
+    border: 1px solid black;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    background-color: cadetblue;
+
+}
+button{
+    appearance: pop-up-menu;
+    animation: ease-in-out;
+    color: darkcyan;
+        
+}

@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>PIZZA TIME</title>
+        <h:outputStylesheet library="css" name="Pizza.css"/>
+        <center> <h:graphicImage library="images" name="output.gif" height="370" width="970" ></h:graphicImage></center>
+    </h:head>
+    <h:body>
+        <h:form>
+            <center>
+
+                <center>   <h1 style="margin-top: 0">OUR PIZZA</h1></center>
+                <p:lightBox styleClass="imagebox" id="lighbox1"> 
+
+                    <h:outputLink value="resources/images/kebab.jpg" title="kebab" style="margin-left: 30px">  
+
+                        <h:graphicImage name="images/kebab.jpg" id="kebab" style="height: 110px; width: 130px"  />  
+                    </h:outputLink>
+
+                    <h:outputLink value="resources/images/tuna.jpg" title="tuna" style="margin-left: 30px">  
+                        <h:graphicImage name="images/tuna.jpg" id="nature4" style="height: 110px; width: 130px" />  
+                    </h:outputLink>
+
+                    <h:outputLink value="resources/images/fruits.jpeg" title="marinara" style="margin-left: 30px">  
+                        <h:graphicImage name="images/fruits.jpeg" id="nature3" style="height: 110px; width: 130px" />  
+                    </h:outputLink>
+                    <h:outputLink value="resources/images/MARGARITHA.jpg" title="Margarita" style="margin-left: 30px">  
+                        <h:graphicImage name="images/MARGARITHA.jpg" id="nature1" style="height: 110px; width: 130px" />  
+                    </h:outputLink>
+                </p:lightBox>
+
+
+                <h:panelGrid  columns="2"    class="auto">
+
+                    <h:panelGroup/> <h:panelGroup/>
+       
+                    
+
+                    <h5 style="margin-top: 0"> PIZZA NAME</h5><br/>
+                    <h:selectOneMenu value="#{pizzaController.name}" required="true">
+                        <f:selectItem itemLabel="" itemValue="" />
+                        <f:selectItem itemLabel="TUNA" itemValue="TUNA" />
+                        <f:selectItem itemLabel="KEBAB" itemValue="KEBAB" />
+                        <f:selectItem itemLabel="FRUITE DE MARE" itemValue="FRUITE DE MARE" />
+                        <f:selectItem itemLabel="MEXICAIN" itemValue="MEXICAIN" />
+                        <f:selectItem itemLabel="MARGARITA" itemValue="MARGARITA" />
+                    </h:selectOneMenu>
+
+                    <h5 style="margin-top: 0">PIZZA SIZE </h5><br/>
+                    <h:selectOneMenu value="#{pizzaController.type}" required="true">
+                        <f:selectItem itemLabel="Small" itemValue="Small" />
+                        <f:selectItem itemLabel="Medium" itemValue="Medium" />
+                        <f:selectItem itemLabel="Big" itemValue="Big" />
+                    </h:selectOneMenu>
+
+                    <h5 style="margin-top: 0">PIZZA PRICE</h5><br/>
+                    <h:inputText value="#{pizzaController.price}"/>
+
+                    <h:message for="number" style="color:blueviolet"/>
+
+                    <p:commandButton value="Submit" id="withIcon" actionListener="#{pizzaController.submit}" update="growl" icon="ui-icon-disk" />
+
+
+                    <p:growl id="growl" life="2000" />
+
+
+                </h:panelGrid>
+
+                <h:panelGrid>
+                    <strong> <em> <h1>  PIZZA LIST  </h1></em> </strong> 
+                    <p:commandButton value="Show List" action="pizzaList"   /> <br/><br/>
+
+                </h:panelGrid>
+                <h:panelGrid>
+                    <h1 style="margin-top: 0">CLIENT CLAIM</h1>
+                    
+
+                  
+               <p:inputTextarea id="menu" value="#{pizzaController.description}" />
+                    
+                    <h:form>
+                       
+                        <p:commandButton onclick="document.getElementbyId('menu').value=''" value="Send claim" icon="ui-icon-refresh"  action="#{pizzaController.sent()}" />
+                    </h:form>
+
+  <p:commandButton value=" CLIENTS CLAIMS" action="clientClaim" style="border-color: orange" /> <br/>
+
+                    <p:growl id="messages" showDetail="true" />
+                </h:panelGrid> 
+
+                <h:panelGrid><center>
+                        <h1>CLIENT RAITING</h1>
+                        <h5> Raiting :</h5></center>
+
+                </h:panelGrid>
+
+                   
+            </center>
+            <center>  <p:commandButton value="HOME" action="HomePage"  />  </center>
+        </h:form>
+
+
+    </h:body>
+</html>
+

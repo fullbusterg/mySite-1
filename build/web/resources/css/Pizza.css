@@ -1,0 +1,25 @@
+body{
+  
+ background-image: url("images/pizza.gif"); 
+color: white;
+ 
+}
+
+
+
+h5 {
+    color: khaki;
+    text-shadow: 2px 2px 2px #FF5900;
+    alignment-adjust: auto
+}
+
+
+
+
+h1 {
+    color: #1D702D;
+    text-shadow: 2px 2px 2px #000000;
+    appearance: pop-up-menu
+}
+
+

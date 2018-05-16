@@ -1,0 +1,28 @@
+h1{
+    color: orange;
+    text-shadow: 4px 2px 2px #1D702D;
+}
+
+div {
+    border: 1px solid black;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    background-color: cadetblue;
+
+}
+.commandButton h {
+display:block;
+width:150px;
+line-height:50px;
+text-align:center;
+vertical-align:middle;
+background:url(images/bouton-noir.png) no-repeat;
+color:white;
+text-decoration:none;
+}
+.commandButton h:hover {
+background:url(images/bouton-noir-2.png) no-repeat;
+}
+
